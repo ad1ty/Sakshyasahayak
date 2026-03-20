@@ -3,67 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sakshya Sahayak | Legal & Compliance Services</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Legal Services</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Blog & Resources</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <nav aria-label="breadcrumb">
-        <ol>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Contact</a></li>
-        </ol>
+    <nav class="site-nav">
+        <div class="container nav-inner">
+            <a href="/" class="nav-logo">
+                <div class="nav-logo-text">
+                    <span class="nav-logo-en">SAKSHYA SAHAYAK</span>
+                    <span class="nav-logo-hi">साक्ष्य सहायक — Legal & Compliance</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#practice-areas">Practice Areas</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Phone: +91-11-4567-XXXX</p>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+    <main id="main-content">
+        <section class="hero">
+            <div class="container hero-content">
+                <h1 class="hero-title-en">Professional Legal Counsel</h1>
+                <p class="hero-title-hi">विश्वसनीय कानूनी समाधान</p>
+                <p class="hero-tagline">Navigating complexity with precision and integrity.</p>
+                <div class="identity-card">
+                    <p><strong>Aditya Chauhan, Advocate</strong></p>
+                    <p>Bar Council of Delhi (D11905/2022)</p>
+                </div>
+            </div>
+        </section>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <section id="about" class="section-pad">
+            <div class="container about-grid">
+                <div class="about-text">
+                    <h2 class="section-heading">About the Practice</h2>
+                    <hr class="heading-rule">
+                    <p>Sakshya Sahayak is dedicated to providing high-quality legal and compliance services tailored to the needs of modern businesses and creators.</p>
+                    <div class="pull-quote">
+                        <p>"Integrity in advocacy, excellence in execution."</p>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="headshot-placeholder">
+                        <span class="headshot-label">Professional Counsel</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" required>
+        <section id="blog" class="section-pad">
+            <div class="container">
+                <p class="practice-group-label">Insights & Guides</p>
+                <h2 class="section-heading">From the Desk</h2>
+                <hr class="heading-rule">
+                <p class="section-intro">Plain-language guides on IP filings, corporate compliance, and legal processes.</p>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-card-meta">
+                            <span class="blog-tag">Trademark</span>
+                            <time class="blog-date">March 2026</time>
+                        </div>
+                        <h3 class="blog-card-title">How Trademark Registration Works in India</h3>
+                        <p class="blog-card-excerpt">A step-by-step guide to protecting your brand identity under the Trademarks Act.</p>
+                        <a href="#" class="blog-read-more">Read Article →</a>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-card-meta">
+                            <span class="blog-tag">Copyright</span>
+                            <time class="blog-date">Feb 2026</time>
+                        </div>
+                        <h3 class="blog-card-title">Copyright for Creators</h3>
+                        <p class="blog-card-excerpt">Understanding automatic protection vs. registration for original works.</p>
+                        <a href="#" class="blog-read-more">Read Article →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+        <section id="contact" class="section-pad">
+            <div class="container contact-wrap">
+                <div class="contact-card">
+                    <h2 class="contact-card-title">Get in Touch</h2>
+                    <p class="contact-card-hi">संपर्क करें</p>
+                    <div class="contact-divider"></div>
+                    
+                    <div class="contact-row">
+                        <div class="contact-row-label">Email</div>
+                        <div class="contact-row-value">
+                            <a href="mailto:contact@sakshyashayak.in">contact@sakshyashayak.in</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-row">
+                        <div class="contact-row-label">Phone</div>
+                        <div class="contact-row-value">
+                            <a href="tel:+919958088691">+91 9958088691</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-row">
+                        <div class="contact-row-label">Address</div>
+                        <div class="contact-row-value">Extension 2C, Street No. 8, New Delhi</div>
+                    </div>
 
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+                    <p class="contact-disclaimer">General awareness only. No advocate-client relationship is created by this contact.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <section id="blog-resources">
-        <h2>Blog & Resources</h2>
-        <article>
-            <h3>Title of Featured Article 1</h3>
-            <p>Excerpt of the article that gives details about the content.</p>
-            <a href="#">Read more</a>
-        </article>
-        <article>
-            <h3>Title of Featured Article 2</h3>
-            <p>Excerpt of the article that gives details about the content.</p>
-            <a href="#">Read more</a>
-        </article>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Your Company. All rights reserved.</p>
-        <p>Disclaimer: Existing terms apply...</p>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3 class="footer-col-title">Sakshya Sahayak</h3>
+                <p class="footer-col-hi">साक्ष्य सहायक</p>
+                <p>Advocacy & Compliance</p>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-col-title">Navigation</h3>
+                <ul class="footer-nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#practice-areas">Practice Areas</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Sakshya Sahayak. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
