@@ -52,4 +52,46 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    oc>https://sakshyasahayak.in/about.html</loc>
+    astmod>2026-03-22</lastmod>
+    hangefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    oc>https://sakshyasahayak.in/trademark.html</loc>
+    astmod>2026-03-22</lastmod>
+    hangefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    oc>https://sakshyasahayak.in/copyright.html</loc>
+    astmod>2026-03-22</lastmod>
+    hangefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    oc>https://sakshyasahayak.in/patent.html</loc>
+    astmod>2026-03-22</lastmod>
+    hangefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    oc>https://sakshyasahayak.in/corporate.html</loc>
+    astmod>2026-03-22</lastmod>
+    hangefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    oc>https://sakshyasahayak.in/disclaimer.html</loc>
+    astmod>2026-03-22</lastmod>
+    hangefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    oc>https://sakshyasahayak.in/contact.html</loc>
+    astmod>2026-03-22</lastmod>
+    hangefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
