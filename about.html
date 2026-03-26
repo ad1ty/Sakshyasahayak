@@ -141,7 +141,7 @@
   <nav class="site-nav">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="assets/og-image.jpg" alt="Logo" class="nav-logo-mark">
+        
         <div class="nav-logo-text">
           <strong class="nav-logo-en">Sakshya Sahayak</strong>
           <span class="nav-logo-hi">साक्ष्य सहायक</span>
@@ -224,9 +224,9 @@
     <div class="container footer-grid">
       <div class="footer-col">
         <p class="footer-col-title">Sakshya Sahayak</p>
-        <p class="footer-col-hi">साक्ष्य सहायक</p>
+        <p class="footer-col-hi" lang="hi">साक्ष्य सहायक</p>
         <address class="footer-info">Aditya Chauhan, Advocate<br>Bar Council of Delhi<br>Enrolment No. D/11905/2022<br>New Delhi, India</address>
-        <a href="https://wa.me/919958088691?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20legal%20services." target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.4rem;color:#6B2D3E;text-decoration:none;font-size:0.875rem;margin-top:0.5rem;font-family:'Inter',sans-serif;" aria-label="WhatsApp Sakshya Sahayak">&#128242; WhatsApp: +91 99580 88691</a>
+        <a href="https://wa.me/919958088691?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20legal%20services." target="_blank" rel="noopener noreferrer" class="footer-whatsapp" aria-label="WhatsApp Sakshya Sahayak">&#128242; WhatsApp: +91 99580 88691</a>
       </div>
       <div class="footer-col">
         <p class="footer-col-title" style="margin-bottom:1rem;">Navigation</p>
@@ -244,9 +244,9 @@
       </div>
       <div class="footer-col">
         <p class="footer-col-title" style="margin-bottom:1rem;">Notice</p>
-        <div style="border:1px solid rgba(201,168,76,0.5);background:rgba(201,168,76,0.06);padding:1rem 1.25rem;border-radius:4px;">
-          <p style="margin:0 0 0.35rem;font-size:0.8rem;font-weight:600;color:#6B2D3E;letter-spacing:0.05em;text-transform:uppercase;">⚖ Awareness Notice</p>
-          <p class="footer-awareness" style="margin:0;">Content on this website is for general awareness only and does not constitute legal advice or solicit professional engagement. Disclosures made pursuant to Rule 36, Chapter II, Part VI, Bar Council of India Rules.</p>
+        <div class="footer-awareness-box">
+          <span class="icon" aria-hidden="true">⚖</span>
+          <p>Content on this website is for general awareness only and does not constitute legal advice or solicit professional engagement. Disclosures made pursuant to Rule 36, Chapter II, Part VI, Bar Council of India Rules.</p>
         </div>
       </div>
     </div>
@@ -266,25 +266,14 @@
 
   <script>(function(){var h=document.getElementById('hamburger-btn'),m=document.getElementById('mobile-nav');if(h&&m){h.addEventListener('click',function(){var e=h.getAttribute('aria-expanded')==='true';h.setAttribute('aria-expanded',String(!e));m.classList.toggle('open');});m.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){h.setAttribute('aria-expanded','false');m.classList.remove('open');});});document.addEventListener('click',function(e){if(!h.contains(e.target)&&!m.contains(e.target)){h.setAttribute('aria-expanded','false');m.classList.remove('open');}});}var r=document.querySelectorAll('.reveal');if('IntersectionObserver'in window){var o=new IntersectionObserver(function(e){e.forEach(function(t){if(t.isIntersecting){t.target.classList.add('visible');o.unobserve(t.target);}});},{threshold:0.08});r.forEach(function(e){o.observe(e);});}else{r.forEach(function(e){e.classList.add('visible');});}})();</script>
   <!-- Scroll-to-top button -->
-  <button id="scroll-top-btn" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'});" style="
-    position:fixed;bottom:24px;left:24px;
-    background:#FAF6F0;color:#6B2D3E;
-    border:1.5px solid #6B2D3E;
-    width:44px;height:44px;
-    border-radius:50%;
-    font-size:1.1rem;cursor:pointer;
-    z-index:998;box-shadow:0 2px 8px rgba(0,0,0,0.12);
-    display:none;align-items:center;justify-content:center;
-    transition:opacity 0.2s,background 0.2s;"
-    onmouseover="this.style.background='#6B2D3E';this.style.color='#FAF6F0';"
-    onmouseout="this.style.background='#FAF6F0';this.style.color='#6B2D3E';">↑</button>
+  <button id="scroll-top-btn" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'});">↑</button>
   <script>
   (function(){
-    var btn=document.getElementById('scroll-top-btn');
-    if(!btn)return;
-    window.addEventListener('scroll',function(){
-      btn.style.display=window.scrollY>300?'flex':'none';
-    },{passive:true});
+    var btn = document.getElementById('scroll-top-btn');
+    if (!btn) return;
+    window.addEventListener('scroll', function() {
+      btn.style.display = window.scrollY > 400 ? 'flex' : 'none';
+    }, { passive: true });
   })();
   </script>
 </body>

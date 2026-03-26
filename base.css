@@ -1,45 +1,53 @@
-/* base.css — Sakshya Sahayak */
+/* ============================================================
+   base.css — Sakshya Sahayak
+   Global reset, typography foundation, design tokens
+   ============================================================ */
+
+/* ── Box model & reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
-  -moz-text-size-adjust: none;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
   text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
   hanging-punctuation: first last;
-  scroll-padding-top: 80px;
 }
 
 body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 17px;
+  color: #0D0D0D;
+  background-color: #F7F5F0;
+  line-height: 1.7;
   min-height: 100dvh;
-  line-height: 1.6;
-  font-family: var(--font-body, sans-serif);
-  font-size: var(--text-base);
-  color: var(--color-text);
-  background-color: var(--color-bg);
 }
 
+/* ── Media ── */
 img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto; }
 ul[role="list"], ol[role="list"] { list-style: none; }
 input, button, textarea, select { font: inherit; color: inherit; }
 
+/* ── Typography balance ── */
 h1, h2, h3, h4, h5, h6 { text-wrap: balance; line-height: 1.15; }
 p, li, figcaption { text-wrap: pretty; }
 
-::selection {
-  background: color-mix(in oklab, var(--color-primary) 25%, transparent);
-  color: var(--color-text);
-}
+/* ── Selection ── */
+::selection { background: rgba(192, 57, 43, 0.15); color: #0D0D0D; }
 
+/* ── Focus ── */
 :focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid #C0392B;
   outline-offset: 3px;
-  border-radius: var(--radius-sm);
+  border-radius: 2px;
 }
 
+/* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -49,18 +57,50 @@ p, li, figcaption { text-wrap: pretty; }
   }
 }
 
+/* ── Misc resets ── */
 button { cursor: pointer; background: none; border: none; }
 table { border-collapse: collapse; width: 100%; }
+address { font-style: normal; }
 
-a, button, [role="button"], [role="link"], input, textarea, select {
-  transition: color var(--transition-interactive),
-              background var(--transition-interactive),
-              border-color var(--transition-interactive),
-              box-shadow var(--transition-interactive),
-              opacity var(--transition-interactive);
+/* ── Skip link ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: #C0392B;
+  color: #F7F5F0;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  z-index: 10000;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ── Screen reader only ── */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
 }
 
-.sr-only {
-  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;
+/* ── Layout container ── */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+}
+
+/* ── Reveal animation ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
