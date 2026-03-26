@@ -106,4 +106,36 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- Blog listing page -->
+  <url>
+    <loc>https://sakshyasahayak.in/blog.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog article: Trademark Registration -->
+  <url>
+    <loc>https://sakshyasahayak.in/blog-trademark-registration-india.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog article: Copyright Registration -->
+  <url>
+    <loc>https://sakshyasahayak.in/blog-copyright-registration-india.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog article: Provisional Patent -->
+  <url>
+    <loc>https://sakshyasahayak.in/blog-provisional-patent-india.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

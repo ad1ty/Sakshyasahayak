@@ -1,155 +1,82 @@
-#!/usr/bin/env python3
-"""
-Fix all remaining HTML inconsistencies in Sakshya Sahayak website
-Run this from the repository root directory
-"""
+# Step 1: Update sitemap.xml with 4 blog URL blocks
+# Step 2: Add Articles nav link to all 8 HTML files
 
-import re
+TODAY = '2026-03-26'
+BASE_URL = 'https://sakshyasahayak.in'
 
-def fix_file(filename, canonical_url, missing_footer_links=[]):
-    print(f"Fixing {filename}...")
-    
-    with open(filename, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # Fix 1: Broken canonical tag (different patterns per file)
-    canonical_patterns = [
-        (r'  //sakshyasahayak\.in/[^"]+"\s*>\s*>\s*>', f'  >'),
-        (r'  //sakshyasahayak\.in/[^"]+"\s*>&gt;&gt;', f'  >'),
-        (r'  //sakshyasahayak\.in/[^"]+"\s*> >>', f'  >'),
-        (r'  //sakshyasahayak\.in/[^"]+"\s*>', f'  >'),
-    ]
-    
-    for pattern, replacement in canonical_patterns:
-        content = re.sub(pattern, replacement, content)
-    
-    # Fix 2: Missing > opening tags in nav (both desktop and mobile)
-    content = re.sub(r'(\s+)><a href="([^"]+)">([^<]+)</a></li>', r'\1><a href="\2">\3</a></li>', content)
-    
-    # Fix 3: Add missing footer nav links
-    if missing_footer_links:
-        footer_nav_pattern = r'(<ul class="footer-nav-list">)(.*?)(</ul>)'
-        match = re.search(footer_nav_pattern, content, re.DOTALL)
-        if match:
-            existing_nav = match.group(2)
-            # Add missing links before Contact
-            for link_html in missing_footer_links:
-                if link_html not in existing_nav:
-                    # Insert before Contact
-                    existing_nav = existing_nav.replace(
-                        '><a href="contact.html">Contact</a></li>',
-                        f'{link_html}\n          ><a href="contact.html">Contact</a></li>'
-                    )
-            content = re.sub(footer_nav_pattern, rf'\1{existing_nav}\3', content, flags=re.DOTALL)
-    
-    # Fix 4: Standardize copyright text
-    copyright_patterns = [
-        (r'© 2026 Sakshya Sahayak(?:\s*\|[^<]*)?', 
-         '© 2026 Sakshya Sahayak. All rights reserved. | Maintained in compliance with BCI Rule 36, Chapter II, Part VI.'),
-    ]
-    
-    for pattern, replacement in copyright_patterns:
-        content = re.sub(pattern, replacement, content)
-    
-    with open(filename, 'w', encoding='utf-8') as f:
-        f.write(content)
-    
-    print(f"✓ {filename} fixed!")
+# Safe read/write
+def rf(p):
+    with open(p, 'r', encoding='utf-8') as f: return f.read()
+def wf(p, c):
+    with open(p, 'w', encoding='utf-8') as f: f.write(c)
 
-# Fix each remaining file
-fix_file('copyright.html', 
-         'https://sakshyasahayak.in/copyright.html',
-         missing_footer_links=['><a href="corporate.html">Corporate</a></li>'])
-
-fix_file('patent.html', 
-         'https://sakshyasahayak.in/patent.html',
-         missing_footer_links=[
-             '><a href="copyright.html">Copyright</a></li>',
-             '><a href="corporate.html">Corporate</a></li>'
-         ])
-
-fix_file('corporate.html', 
-         'https://sakshyasahayak.in/corporate.html',
-         missing_footer_links=[
-             '><a href="copyright.html">Copyright</a></li>',
-             '><a href="patent.html">Patent</a></li>'
-         ])
-
-fix_file('disclaimer.html', 
-         'https://sakshyasahayak.in/disclaimer.html',
-         missing_footer_links=[
-             '><a href="copyright.html">Copyright</a></li>',
-             '><a href="patent.html">Patent</a></li>',
-             '><a href="corporate.html">Corporate</a></li>'
-         ])
-
-fix_file('contact.html', 
-         'https://sakshyasahayak.in/contact.html',
-         missing_footer_links=[
-             '><a href="copyright.html">Copyright</a></li>',
-             '><a href="patent.html">Patent</a></li>',
-             '><a href="corporate.html">Corporate</a></li>'
-         ])
-
-# Fix sitemap.xml
-print("Fixing sitemap.xml...")
-with open('sitemap.xml', 'r', encoding='utf-8') as f:
-    sitemap = f.read()
-
-sitemap_additions = '''  <url>
-    oc>https://sakshyasahayak.in/about.html</loc>
-    astmod>2026-03-22</lastmod>
-    hangefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+# === STEP 1: SITEMAP ===
+SITEMAP_ADDITIONS = '''  <!-- Blog listing page -->
   <url>
-    oc>https://sakshyasahayak.in/trademark.html</loc>
-    astmod>2026-03-22</lastmod>
-    hangefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    oc>https://sakshyasahayak.in/copyright.html</loc>
-    astmod>2026-03-22</lastmod>
-    hangefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    oc>https://sakshyasahayak.in/patent.html</loc>
-    astmod>2026-03-22</lastmod>
-    hangefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    oc>https://sakshyasahayak.in/corporate.html</loc>
-    astmod>2026-03-22</lastmod>
-    hangefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    oc>https://sakshyasahayak.in/disclaimer.html</loc>
-    astmod>2026-03-22</lastmod>
-    hangefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    oc>https://sakshyasahayak.in/contact.html</loc>
-    astmod>2026-03-22</lastmod>
-    hangefreq>yearly</changefreq>
+    <loc>https://sakshyasahayak.in/blog.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Blog article: Trademark Registration -->
+  <url>
+    <loc>https://sakshyasahayak.in/blog-trademark-registration-india.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog article: Copyright Registration -->
+  <url>
+    <loc>https://sakshyasahayak.in/blog-copyright-registration-india.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog article: Provisional Patent -->
+  <url>
+    <loc>https://sakshyasahayak.in/blog-provisional-patent-india.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 '''
 
-if 'about.html' not in sitemap:
-    sitemap = sitemap.replace('</urlset>', sitemap_additions + '</urlset>')
-    with open('sitemap.xml', 'w', encoding='utf-8') as f:
-        f.write(sitemap)
-    print("✓ sitemap.xml fixed!")
+sitemap = rf('sitemap.xml')
+if 'blog.html' in sitemap:
+    print('Sitemap already has blog entries, skipping')
 else:
-    print("✓ sitemap.xml already has new pages!")
+    sitemap_new = sitemap.replace('</urlset>', SITEMAP_ADDITIONS + '</urlset>')
+    wf('sitemap.xml', sitemap_new)
+    print('Sitemap updated with 4 blog URL blocks')
 
-print("\n✅ All fixes complete!")
-print("\nNext steps:")
-print("1. Review changes: git diff")
-print("2. Commit: git add . && git commit -m 'Fix all HTML inconsistencies'")
-print("3. Push: git push origin main")
+# === STEP 2: ADD ARTICLES NAV TO ALL HTML FILES ===
+FIND = '<li><a href="faq.html">FAQ</a></li>'
+REPLACE = '<li><a href="faq.html">FAQ</a></li>\n    <li><a href="blog.html">Articles</a></li>'
+
+# Pages to update (not blog pages themselves)
+pages = [
+    'index.html', 'trademark.html', 'copyright.html', 'patent.html',
+    'corporate.html', 'about.html', 'contact.html', 'faq.html'
+]
+
+for page in pages:
+    try:
+        content = rf(page)
+        if '<a href="blog.html">Articles</a>' in content:
+            print(f'{page}: Articles nav already present, skipping')
+            continue
+        count = content.count(FIND)
+        if count == 0:
+            print(f'WARNING: {page}: FAQ nav item not found!')
+            continue
+        new_content = content.replace(FIND, REPLACE)
+        wf(page, new_content)
+        print(f'{page}: Added Articles nav ({count} occurrence(s) replaced)')
+    except FileNotFoundError:
+        print(f'WARNING: {page} not found!')
+
+print('\n=== ALL DONE ===')
