@@ -1,0 +1,21 @@
+{
+  "name": "Sakshya Sahayak — IP Law Firm",
+  "short_name": "Sakshya Sahayak",
+  "description": "Trademark, Copyright & IP Law — New Delhi. Advocate Aditya Chauhan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF6F0",
+  "theme_color": "#6B2D3E",
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "legal"],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

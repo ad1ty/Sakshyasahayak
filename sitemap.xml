@@ -1,141 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
   <url>
     <loc>https://sakshyasahayak.in/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- About section anchor -->
   <url>
-    <loc>https://sakshyasahayak.in/#about</loc>
-    <lastmod>2026-03-26</lastmod>
+    <loc>https://sakshyasahayak.in/about</loc>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Practice Areas anchor -->
-  <url>
-    <loc>https://sakshyasahayak.in/#practice-areas</loc>
-    <lastmod>2026-03-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Process anchor -->
-  <url>
-    <loc>https://sakshyasahayak.in/#process</loc>
-    <lastmod>2026-03-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Resources / FAQ anchor -->
-  <url>
-    <loc>https://sakshyasahayak.in/#resources</loc>
-    <lastmod>2026-03-26</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Contact anchor -->
   <url>
-    <loc>https://sakshyasahayak.in/#contact</loc>
-    <lastmod>2026-03-26</lastmod>
+    <loc>https://sakshyasahayak.in/trademark</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://sakshyasahayak.in/copyright</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://sakshyasahayak.in/patent</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://sakshyasahayak.in/corporate</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://sakshyasahayak.in/contact</loc>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://sakshyasahayak.in/faq</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    oc>https://sakshyasahayak.in/about.html</loc>
-    astmod>2026-03-22</lastmod>
-    hangefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    oc>https://sakshyasahayak.in/trademark.html</loc>
-    astmod>2026-03-22</lastmod>
-    hangefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    oc>https://sakshyasahayak.in/copyright.html</loc>
-    astmod>2026-03-22</lastmod>
-    hangefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    oc>https://sakshyasahayak.in/patent.html</loc>
-    astmod>2026-03-22</lastmod>
-    hangefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    oc>https://sakshyasahayak.in/corporate.html</loc>
-    astmod>2026-03-22</lastmod>
-    hangefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    oc>https://sakshyasahayak.in/disclaimer.html</loc>
-    astmod>2026-03-22</lastmod>
-    hangefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    oc>https://sakshyasahayak.in/contact.html</loc>
-    astmod>2026-03-22</lastmod>
-    hangefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-                <url>
-                <loc>https://sakshyasahayak.in/privacy.html</loc>
-                <lastmod>2026-03-26</lastmod>
-                <changefreq>yearly</changefreq>
-                <priority>0.5</priority>
-        </url>
-  <url>
-    <loc>https://sakshyasahayak.in/faq.html</loc>
-    <lastmod>2026-03-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <!-- Blog listing page -->
-  <url>
-    <loc>https://sakshyasahayak.in/blog.html</loc>
-    <lastmod>2026-03-26</lastmod>
+    <loc>https://sakshyasahayak.in/blog</loc>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog article: Trademark Registration -->
   <url>
-    <loc>https://sakshyasahayak.in/blog-trademark-registration-india.html</loc>
-    <lastmod>2026-03-26</lastmod>
+    <loc>https://sakshyasahayak.in/blog-trademark-registration-india</loc>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Blog article: Copyright Registration -->
   <url>
-    <loc>https://sakshyasahayak.in/blog-copyright-registration-india.html</loc>
-    <lastmod>2026-03-26</lastmod>
+    <loc>https://sakshyasahayak.in/blog-copyright-registration-india</loc>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Blog article: Provisional Patent -->
   <url>
-    <loc>https://sakshyasahayak.in/blog-provisional-patent-india.html</loc>
-    <lastmod>2026-03-26</lastmod>
+    <loc>https://sakshyasahayak.in/blog-provisional-patent-india</loc>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sakshyasahayak.in/disclaimer</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://sakshyasahayak.in/privacy</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://sakshyasahayak.in/terms</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>

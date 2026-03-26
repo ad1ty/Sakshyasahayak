@@ -1095,3 +1095,153 @@
 .skip-link:focus {
   top: 0;
 }
+
+/* ── D2: Sticky Navigation ── */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-parchment);
+  border-bottom: 1px solid rgba(201,168,76,0.3);
+  transition: box-shadow 0.2s;
+}
+
+/* ── D1: Max content width on large screens ── */
+body > main, body > .site-footer {
+  width: 100%;
+}
+
+/* ── D4: Practice card hover states ── */
+.practice-tile:hover {
+  border-left: 3px solid var(--color-maroon);
+  transform: translateY(-2px);
+  transition: border-left 0.15s, transform 0.15s;
+}
+
+/* ── D5: Focus-visible styles ── */
+:focus-visible {
+  outline: 2px solid var(--color-maroon);
+  outline-offset: 3px;
+}
+
+/* ── M6: Fluid heading sizes ── */
+h1, .hero-title-en {
+  font-size: clamp(1.8rem, 5vw, 4rem);
+}
+h2, .section-heading {
+  font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+}
+h3 {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
+/* ── M8: Tap targets ── */
+nav a, .footer-nav-list a, .nav-links a {
+  padding: 10px 4px;
+  display: inline-block;
+  min-height: 44px;
+  box-sizing: border-box;
+}
+
+/* ── M3: Hero CTA buttons mobile stack ── */
+@media (max-width: 520px) {
+  .hero-cta {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100%;
+  }
+  .hero-cta a {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+/* ── U9: Devanagari typographic treatment ── */
+.nav-logo-hi,
+.hero-title-hi,
+.footer-col-hi,
+[lang="hi"] {
+  font-family: var(--font-hindi, 'Hind', 'Noto Sans Devanagari', sans-serif) !important;
+  color: var(--color-gold) !important;
+  font-weight: 500;
+}
+
+/* ── U8: Section divider between IP and Corporate ── */
+.practice-group-divider {
+  border: none;
+  border-top: 1px solid rgba(201,168,76,0.4);
+  margin: 2.5rem 0 1.5rem;
+}
+
+/* ── U10: Footer awareness notice ── */
+.footer-awareness {
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* ── U11: Scroll-to-top already inline styled ── */
+
+/* ── M5: Accordion for mobile service lists ── */
+@media (max-width: 768px) {
+  .practice-grid details {
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .practice-grid details summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--color-maroon);
+    list-style: none;
+  }
+  .practice-grid details summary::-webkit-details-marker { display: none; }
+  .practice-grid details summary::after { content: ' +'; color: var(--color-gold); }
+  .practice-grid details[open] summary::after { content: ' −'; }
+}
+
+/* ── BCI Modal mobile safe ── */
+@media (max-width: 480px) {
+  #bci-overlay > div {
+    padding: 1.5rem 1rem !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+  }
+}
+
+/* ── D3: Two-column hero on desktop ── */
+@media (min-width: 900px) {
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    text-align: left;
+  }
+  .hero-content .hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-content .hero-cta {
+    justify-content: flex-start !important;
+  }
+  .hero-content .identity-card {
+    text-align: left !important;
+  }
+}
+
+/* ── U2: Active nav state ── */
+.nav-links a[aria-current="page"],
+.nav-mobile-menu a[aria-current="page"] {
+  color: var(--color-maroon);
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-gold);
+}
+
+/* ── M7: iOS Safari PWA meta ── */
+/* (handled via <meta> tags in HTML) */
+
+/* ── Apple touch icon — handled via <link> tags ── */
